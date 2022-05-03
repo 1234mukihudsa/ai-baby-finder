@@ -8,6 +8,7 @@ function setup()
     canvas.center();
     video=createCapture(VIDEO);
     video.hide();
+    video..size(380,380);
     objectdetector=ml5.objectDetector('cocossd',modelLoaded);
     document.getElementById("status").innerHTML="status:detecting objects";
 }
@@ -41,6 +42,7 @@ function draw()
 
     if(status!="")
     {
+        image(video,0,0,380,380)
         r=random(255);
         g=random(255);
         b=random(255);
